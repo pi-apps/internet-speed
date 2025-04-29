@@ -1,0 +1,589 @@
+{
+  "Files": [
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\InternetSpeed.Web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\InternetSpeed.Web.11s2oophq4.bundle.scp.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\plugins\\plugins.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\plugins.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\vendor\\base.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\base.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\vendor\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\bootstrap.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\vendor\\font-awesome.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\font-awesome.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\vendor\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\slick-theme.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\css\\vendor\\slick.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\slick.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-brands-400d41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-brands-400d41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-duotone-900d41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-duotone-900d41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-light-300d41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-light-300d41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-regular-400d41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-regular-400d41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\fa-solid-900d41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fa-solid-900d41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\fonts\\slick.woff"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\fonts\\slickd41dd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\slickd41dd41d.eot"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\Under_contruction_icon-red.svg",
+      "PackagePath": "staticwebassets\\images\\Under_contruction_icon-red.svg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\images\\ajax-loader.gif"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\banner\\post-hover-image-03.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\post-hover-image-03.jpg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\bg\\bg-image-4.jpg",
+      "PackagePath": "staticwebassets\\images\\bg\\bg-image-4.jpg"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\images\\favicon.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\icons\\arrow-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\arrow-icon.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\icons\\light-close.png",
+      "PackagePath": "staticwebassets\\images\\icons\\light-close.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\icons\\shape-01.png",
+      "PackagePath": "staticwebassets\\images\\icons\\shape-01.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\icons\\shape-02.png",
+      "PackagePath": "staticwebassets\\images\\icons\\shape-02.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\logo\\logo-black.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo-black.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\logo\\logo-white.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo-white.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\logo\\logo-white2.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo-white2.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\1.png",
+      "PackagePath": "staticwebassets\\images\\others\\1.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\2.png",
+      "PackagePath": "staticwebassets\\images\\others\\2.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\3.png",
+      "PackagePath": "staticwebassets\\images\\others\\3.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\4.png",
+      "PackagePath": "staticwebassets\\images\\others\\4.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\404.png",
+      "PackagePath": "staticwebassets\\images\\others\\404.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\5.png",
+      "PackagePath": "staticwebassets\\images\\others\\5.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\6.png",
+      "PackagePath": "staticwebassets\\images\\others\\6.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\7.png",
+      "PackagePath": "staticwebassets\\images\\others\\7.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\8.png",
+      "PackagePath": "staticwebassets\\images\\others\\8.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\9.png",
+      "PackagePath": "staticwebassets\\images\\others\\9.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\author.png",
+      "PackagePath": "staticwebassets\\images\\others\\author.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\others\\maintenence.png",
+      "PackagePath": "staticwebassets\\images\\others\\maintenence.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\1.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\1.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\2.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\2.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\3.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\3.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\4.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\4.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\5.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\5.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\images\\small-images\\6.png",
+      "PackagePath": "staticwebassets\\images\\small-images\\6.png"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\PiScript.js",
+      "PackagePath": "staticwebassets\\js\\PiScript.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\bootstrap.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\jquery.style.switcher.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery.style.switcher.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\js.cookie.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\js.cookie.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\modernizr.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\modernizr.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\slick.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\vendor\\tweenmax.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\tweenmax.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InternetSpeed.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InternetSpeed.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.InternetSpeed.Web.props",
+      "PackagePath": "build\\InternetSpeed.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.InternetSpeed.Web.props",
+      "PackagePath": "buildMultiTargeting\\InternetSpeed.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.InternetSpeed.Web.props",
+      "PackagePath": "buildTransitive\\InternetSpeed.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,16 @@
+services:
+  internetspeed.web:
+    image: ${DOCKER_REGISTRY-}internetspeedweb
+    build:
+      context: .
+      dockerfile: InternetSpeed.Web/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      ASPNETCORE_URLS: "https://+;http://+"
+      ASPNETCORE_HTTPS_PORT: "443"
+      ASPNETCORE_ENVIRONMENT: Production
+    volumes:
+      - /root/example.crt:/https/example.crt:ro
+      - /root/example.key:/https/example.key:ro

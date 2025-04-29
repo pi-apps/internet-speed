@@ -1,0 +1,58 @@
+name: dockercompose10123658622865150311
+services:
+  internetspeed.web:
+    build:
+      context: B:\InternetSpeed
+      dockerfile: InternetSpeed.Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORT: "443"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: https://+;http://+
+    image: internetspeedweb
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+      - mode: ingress
+        target: 443
+        published: "443"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /root/InternetSpeed.crt
+        target: /https/InternetSpeed.crt
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: /root/InternetSpeed.key
+        target: /https/InternetSpeed.key
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Sepehr\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\Sepehr\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose10123658622865150311_default

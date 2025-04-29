@@ -1,0 +1,357 @@
+
+/* Page Loader */
+.animation-block {
+	position: relative;
+}
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5, 0.5, 1);
+	}
+}
+
+
+.animation-block a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+}
+
+.frame {
+	padding: 3rem 5vw;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.frame__title {
+	font-size: inherit;
+	margin: 0 0 1rem;
+	font-weight: normal;
+}
+
+.frame__links {
+	display: inline;
+}
+
+.frame__links a {
+	text-transform: lowercase;
+}
+
+.frame__links a:not(:last-child) {
+	margin-right: 1rem;
+}
+
+
+.animation-block.block {
+	text-transform: lowercase;
+	padding: 0 4rem 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.block__title {
+	position: relative;
+	font-size: 1rem;
+	margin: 0 0 1.5rem 0;
+	padding: 0.5rem 0;
+	cursor: pointer;
+	font-family: titling-gothic-fb-wide, sans-serif;
+	font-weight: 700;
+	color: var(--color-blocktitle);
+}
+
+.block__title:hover {
+	color: var(--color-blocktitle-hover);
+}
+
+.block__link {
+	position: relative;
+	cursor: pointer;
+	padding: 0.5rem 0;
+	color: var(--color-blocklink);
+}
+
+.block__link:hover {
+	color: var(--color-blocklink-hover);
+}
+
+.block__title span,
+.block__link span,
+.content__text-link span {
+	display: inline-block;
+	white-space: pre;
+}
+
+.content__text {
+	padding: 0 5vw 25vh;
+	line-height: 2;
+	color: var(--color-text);
+}
+
+.content__text-link {
+	position: relative;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.content__text-link:first-of-type,
+.content__text-link:nth-of-type(11),
+.content__text-link:nth-of-type(21) {
+	color: #f7e300;
+}
+
+.content__text-link:nth-of-type(2),
+.content__text-link:nth-of-type(12),
+.content__text-link:nth-of-type(22) {
+	color: #002df7;
+}
+
+.content__text-link:nth-of-type(3),
+.content__text-link:nth-of-type(13),
+.content__text-link:nth-of-type(23) {
+	color: #e51679;
+}
+
+.content__text-link:nth-of-type(4),
+.content__text-link:nth-of-type(14) {
+	color: #fff;
+}
+
+.content__text-link:nth-of-type(5),
+.content__text-link:nth-of-type(15) {
+	color: #00f73d;
+}
+
+.content__text-link:nth-of-type(6),
+.content__text-link:nth-of-type(16) {
+	color: #00e8f7;
+}
+
+.content__text-link:nth-of-type(7),
+.content__text-link:nth-of-type(17) {
+	color: #a753eb;
+}
+
+.content__text-link:nth-of-type(8),
+.content__text-link:nth-of-type(18) {
+	color: #ff2626;
+}
+
+.content__text-link:nth-of-type(9),
+.content__text-link:nth-of-type(19) {
+	color: #eb8e53;
+}
+
+.content__text-link:nth-of-type(10),
+.content__text-link:nth-of-type(20) {
+	color: #ff00e7;
+}
+
+.animation-block.block[data-fx="1"] a::after,
+a.content__text-link[data-fx="1"]::after,
+.animation-block.block[data-fx="2"] a::after,
+a.content__text-link[data-fx="2"]::after {
+	content: '';
+	z-index: -1;
+	width: 100%;
+	bottom: 0.25rem;
+	left: 0;
+	position: absolute;
+	height: 2px;
+	background: currentColor;
+	transform: scale3d(0, 1, 1);
+	transform-origin: 0% 50%;
+	transition: transform 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+}
+
+a.content__text-link[data-fx="1"]::after,
+a.content__text-link[data-fx="2"]::after {
+	bottom: 0;
+}
+
+.animation-block.block[data-fx="1"] a:hover::after,
+a.content__text-link[data-fx="1"]:hover::after,
+.animation-block.block[data-fx="2"] a:hover::after,
+a.content__text-link[data-fx="2"]:hover::after {
+	transform: scale3d(1, 1, 1)
+}
+
+.animation-block.block[data-fx="6"] a::after,
+a.content__text-link[data-fx="6"]::after {
+	content: '';
+	z-index: -1;
+	width: 100%;
+	bottom: 0.25rem;
+	left: 0;
+	position: absolute;
+	height: 2px;
+	background: currentColor;
+	transform: scale3d(0, 1, 1);
+	transform-origin: 100% 50%;
+	transition: transform 0.7s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+
+a.content__text-link[data-fx="6"]::after {
+	bottom: 0;
+}
+
+.animation-block.block[data-fx="6"] a:hover::after,
+a.content__text-link[data-fx="6"]:hover::after {
+	transform: scale3d(1, 1, 1)
+}
+
+.animation-block.block[data-fx="14"] a::after,
+a.content__text-link[data-fx="14"]::after {
+	content: '';
+	z-index: -1;
+	width: 100%;
+	bottom: 0.25rem;
+	left: 0;
+	position: absolute;
+	height: 2px;
+	background: currentColor;
+	transform: scale3d(0, 1, 1);
+	transform-origin: 0% 50%;
+}
+
+a.content__text-link[data-fx="14"]::after {
+	bottom: 0;
+}
+
+.animation-block.block[data-fx="14"] a:hover::after,
+a.content__text-link[data-fx="14"]:hover::after {
+	animation: loop 0.5s infinite;
+}
+
+@keyframes loop {
+	0% {
+		transform-origin: 0% 50%;
+		transform: scale3d(0, 1, 1);
+	}
+
+	50% {
+		transform-origin: 0% 50%;
+		transform: scale3d(1, 1, 1);
+	}
+
+	51% {
+		transform-origin: 100% 50%;
+	}
+
+	100% {
+		transform-origin: 100% 50%;
+		transform: scale3d(0, 1, 1);
+	}
+}
+
+.hover-reveal {
+	position: fixed;
+	width: 200px;
+	height: 150px;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.hover-reveal__inner,
+.hover-reveal__img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.hover-reveal__deco {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #181314;
+}
+
+.hover-reveal__img {
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+@media screen and (min-width: 53em) {
+	.message {
+		display: none;
+	}
+
+	.frame {
+		position: fixed;
+		text-align: left;
+		z-index: 10000;
+		top: 0;
+		left: 0;
+		display: grid;
+		align-content: space-between;
+		width: 100%;
+		max-width: none;
+		height: 100vh;
+		padding: 2rem;
+		pointer-events: none;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 'title links'
+			'... ...'
+			'... github';
+	}
+
+	.frame__title {
+		grid-area: title;
+		padding: 0;
+	}
+
+	.frame__links {
+		grid-area: links;
+		padding: 0;
+		justify-self: end;
+	}
+
+
+
+	.frame a {
+		pointer-events: auto;
+	}
+
+	.animation-block.block {
+		align-items: flex-start;
+	}
+
+	
+
+	.content__text {
+		grid-column: span 3;
+	}
+}

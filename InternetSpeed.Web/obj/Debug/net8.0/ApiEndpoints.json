@@ -1,0 +1,92 @@
+[
+  {
+    "ContainingType": "InternetSpeed.Web.Controllers.PiPaymentController",
+    "Method": "ApprovePayment",
+    "RelativePath": "payment/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accessToken",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "paymentId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternetSpeed.Web.Controllers.PiPaymentController",
+    "Method": "CancelPayment",
+    "RelativePath": "payment/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternetSpeed.Web.Controllers.PiPaymentController",
+    "Method": "CompletePayment",
+    "RelativePath": "payment/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "txid",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternetSpeed.Web.Controllers.PiPaymentController",
+    "Method": "ErrorPayment",
+    "RelativePath": "payment/error",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InternetSpeed.Web.Controllers.PiPaymentController",
+    "Method": "GetUserInfo",
+    "RelativePath": "payment/me",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accessToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
