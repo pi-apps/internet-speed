@@ -1,0 +1,12 @@
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\bin\Release\net8.0\InternetSpeed.DataLayer.deps.json
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\bin\Release\net8.0\InternetSpeed.DataLayer.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\bin\Release\net8.0\InternetSpeed.DataLayer.pdb
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.csproj.AssemblyReference.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.AssemblyInfoInputs.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.AssemblyInfo.cs
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.csproj.CoreCompileInputs.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\refint\InternetSpeed.DataLayer.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\InternetSpeed.DataLayer.pdb
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.DataLayer\obj\Release\net8.0\ref\InternetSpeed.DataLayer.dll

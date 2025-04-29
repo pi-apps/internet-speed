@@ -1,0 +1,252 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<div class="container">
+    <div class="text-center">
+
+        <div class="axil-area axil-section-gap bg-color-white">
+            <div style="text-align:center;"><div style="min-height:560px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:560px;border:none;overflow:hidden !important;" src="//openspeedtest.com/speedtest" title="engine"></iframe></div></div></div>
+            <div class="row">
+
+                <div class="axil-section-gapTop axil-contact-form-area">
+                    <h4 class="title mb--10">Support us</h4>
+
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="form-group">
+                            <label for="donationAmount">Donate</label>
+                            <input type="number" name="donationAmount" class="form-control" id="donationAmount" placeholder="0 Pi">
+                            <small id="amountError" class="text-danger" style="display:none;">Amount is required</small>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="donate-message">Your Message</label>
+                            <textarea name="donate-message" id="donate-message"></textarea>
+                            <small id="messageError" class="text-danger" style="display:none;">Message is required</small>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-submit">
+                            <button name="submit" type="button" onclick="validateAndDonate()" class="axil-button button-rounded btn-primary">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 text-center mt-4 mb-5">
+        <a href="https://test.internetspeed.top" class="custom-button py-3">Go to TestNet</a>
+    </div>
+
+    <div class="axil-section-gap bg-color-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 class="title">Soon . . .</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt--30">
+                <div class="col-lg-12">
+                    <ul class="instagram-post-list">
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/1.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/2.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/3.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/4.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/5.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                        <li class="single-post">
+                            <a href="#">
+                                <img src="/images/small-images/6.png" alt="Instagram Images">
+                                <span class="instagram-button"><i class="fab fa-internet-explorer"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Styles {
+    <style>
+        .custom-button {
+            display: inline-block;
+            background-color: #963bf7;
+            color: white;
+            font-size: 22px;
+            padding: 18px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+            .custom-button:hover {
+                background-color: #6711c2;
+                transform: scale(1.05);
+            }
+    </style>
+}
+@section FooterMenu
+{
+    <div class="footer-mainmenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">Speed Test</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="#">Run Speed Test</a></li>
+                                <li><a href="#">How It Works</a></li>
+                                <li><a href="#">Compare ISP Speeds</a></li>
+                                <li><a href="#">Ping & Latency Test</a></li>
+                                <li><a href="#">WiFi Speed Test</a></li>
+                                <li><a href="#">Broadband Speed Test</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">News & Trends</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="#">ISP Rankings</a></li>
+                                <li><a href="#">5G vs Fiber</a></li>
+                                <li><a href="#">Broadband Upgrades</a></li>
+                                <li><a href="#">Starlink & Satellite Internet</a></li>
+                                <li><a href="#">Mobile Data & 5G Plans</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">Guides</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="#">Improve Internet Speed</a></li>
+                                <li><a href="#">Best Router Setup</a></li>
+                                <li><a href="#">Fix Slow Internet</a></li>
+                                <li><a href="#">Choose the Best ISP</a></li>
+                                <li><a href="#">Public vs Private IP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">ISP Comparisons</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="#">ISP Reviews</a></li>
+                                <li><a href="#">Fastest ISPs</a></li>
+                                <li><a href="#">Lowest Latency ISPs</a></li>
+                                <li><a href="#">Best Upload Speeds</a></li>
+                                <li><a href="#">ISP Data Caps</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">About</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="#">Who We Are</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                                <li><a asp-controller="Home" asp-action="TermsOfService">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h2 class="title">Follow Us</h2>
+                        <div class="inner">
+                            <ul class="ft-menu-list">
+                                <li><a href="https://twitter.com">Twitter</a></li>
+                                <li><a href="https://facebook.com">Facebook</a></li>
+                                <li><a href="https://linkedin.com">LinkedIn</a></li>
+                                <li><a href="https://instagram.com">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+
+@section Scripts
+{
+    <partial name="_PiNetworkScripts" />
+    <script>
+        function validateAndDonate() {
+            let amount = document.getElementById("donationAmount").value;
+            let message = document.getElementById("donate-message").value.trim();
+            let isValid = true;
+
+            if (amount === "" || amount <= 0) {
+                document.getElementById("amountError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("amountError").style.display = "none";
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById("messageError").style.display = "none";
+            }
+
+            if (isValid) {
+                StartPayment();
+            }
+        }
+
+        function StartPayment() {
+            createPayment();
+        }
+    </script>
+}

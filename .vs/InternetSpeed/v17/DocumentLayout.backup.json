@@ -1,0 +1,277 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\InternetSpeed\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\wwwroot\\js\\piscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\wwwroot\\js\\piscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\footer\\_footerrefrences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\footer\\_footerrefrences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAD24D57-755E-49D3-B6F7-D1124908A01E}|InternetSpeed.DataLayer\\InternetSpeed.DataLayer.csproj|b:\\internetspeed\\internetspeed.datalayer\\dtos\\donationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD24D57-755E-49D3-B6F7-D1124908A01E}|InternetSpeed.DataLayer\\InternetSpeed.DataLayer.csproj|solutionrelative:internetspeed.datalayer\\dtos\\donationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\controllers\\pipaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\controllers\\pipaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\footer\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\footer\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\errors\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\errors\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\errors\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\errors\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\shared\\header\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\shared\\header\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|b:\\internetspeed\\internetspeed.web\\views\\home\\maintenance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20A3922D-86D4-487C-9187-6F15C6FF5959}|InternetSpeed.Web\\InternetSpeed.Web.csproj|solutionrelative:internetspeed.web\\views\\home\\maintenance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PiPaymentController.cs",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Controllers\\PiPaymentController.cs",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Controllers\\PiPaymentController.cs",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Controllers\\PiPaymentController.cs",
+              "RelativeToolTip": "InternetSpeed.Web\\Controllers\\PiPaymentController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T22:08:26.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PiScript.js",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\PiScript.js",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\wwwroot\\js\\PiScript.js",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\wwwroot\\js\\PiScript.js",
+              "RelativeToolTip": "InternetSpeed.Web\\wwwroot\\js\\PiScript.js",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-17T20:15:24.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DonationDto.cs",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.DataLayer\\DTOs\\DonationDto.cs",
+              "RelativeDocumentMoniker": "InternetSpeed.DataLayer\\DTOs\\DonationDto.cs",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.DataLayer\\DTOs\\DonationDto.cs",
+              "RelativeToolTip": "InternetSpeed.DataLayer\\DTOs\\DonationDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T19:36:28.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T19:35:25.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_FooterRefrences.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Footer\\_FooterRefrences.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\Footer\\_FooterRefrences.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Footer\\_FooterRefrences.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\Footer\\_FooterRefrences.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T19:34:29.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\appsettings.json",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\appsettings.json",
+              "RelativeToolTip": "InternetSpeed.Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-12T18:42:21.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Footer\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\Footer\\_Footer.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Footer\\_Footer.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\Footer\\_Footer.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T18:24:08.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-31T21:50:22.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "InternetSpeed.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAA/wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:02:51.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ContactUs.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\ContactUs.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Home\\ContactUs.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\ContactUs.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Home\\ContactUs.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T18:35:01.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Header\\_Header.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\Header\\_Header.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Header\\_Header.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\Header\\_Header.cshtml",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAgwBcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T19:08:17.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Program.cs",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Program.cs",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Program.cs",
+              "RelativeToolTip": "InternetSpeed.Web\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T15:40:35.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T18:02:46.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Maintenance.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Maintenance.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Home\\Maintenance.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Home\\Maintenance.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Home\\Maintenance.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T13:42:02.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Error404.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Errors\\Error404.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\Errors\\Error404.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Errors\\Error404.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\Errors\\Error404.cshtml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAgwGsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T15:42:08.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Errors\\Error.cshtml",
+              "RelativeDocumentMoniker": "InternetSpeed.Web\\Views\\Shared\\Errors\\Error.cshtml",
+              "ToolTip": "B:\\InternetSpeed\\InternetSpeed.Web\\Views\\Shared\\Errors\\Error.cshtml",
+              "RelativeToolTip": "InternetSpeed.Web\\Views\\Shared\\Errors\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-13T15:45:29.851Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

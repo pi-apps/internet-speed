@@ -1,0 +1,15 @@
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\bin\Release\net8.0\InternetSpeed.Core.deps.json
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\bin\Release\net8.0\InternetSpeed.Core.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\bin\Release\net8.0\InternetSpeed.Core.pdb
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\bin\Release\net8.0\InternetSpeed.DataLayer.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\bin\Release\net8.0\InternetSpeed.DataLayer.pdb
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.csproj.AssemblyReference.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.AssemblyInfoInputs.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.AssemblyInfo.cs
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.csproj.CoreCompileInputs.cache
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.csproj.CopyComplete
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\refint\InternetSpeed.Core.dll
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\InternetSpeed.Core.pdb
+D:\Program\C#\Project\InternetSpeed\InternetSpeed.Core\obj\Release\net8.0\ref\InternetSpeed.Core.dll

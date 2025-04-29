@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>InternetSpeed - @ViewData["Title"]</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <partial name="Header/_MetaTags" />
+    <partial name="Header/_HeaderRefrences" />
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <div id="my_switcher" class="my_switcher">
+            <ul>
+                <li>
+                    <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                        <span title="Light Mode">Light</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                        <span title="Dark Mode">Dark</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <partial name="Header/_Header" />
+
+        @RenderBody()
+
+        <div class="axil-footer-area axil-footer-style-1 footer-variation-2">
+            @await RenderSectionAsync("FooterMenu", false)
+            <partial name="Footer/_Footer" />
+        </div>
+
+    </div>
+
+    <partial name="Footer/_FooterRefrences" />
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
+
+
