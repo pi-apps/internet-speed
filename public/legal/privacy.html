@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>Privacy Policy — Internet Speed</title>
+<meta name="description" content="Exactly what Internet Speed stores, what it does not, how long it keeps it, and how to delete it.">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Internet Speed">
+<script type="module" src="/js/legal.js"></script>
+</head>
+<body>
+<a class="skip" href="#doc">Skip to the document</a>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Speed &amp; latency</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/legal/terms">Terms</a>
+        <a href="/legal/privacy" aria-current="page">Privacy</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-tools">
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap legal" id="doc">
+  <article class="legal-doc">
+    <span class="eyebrow">Legal</span>
+    <h1 style="font-size:var(--f-2xl)">Privacy Policy</h1>
+
+    <div class="legal-meta">
+      <span>Last updated: <b id="updated">—</b></span>
+      <span>Applies to: <b id="host">this site</b></span>
+    </div>
+
+    <div class="legal-key">
+      <p><b>The short version.</b> No tracking across sites, no third-party analytics, and nothing about you is sold. The site may show adverts from the Pi Developer Ad Network, and we record only whether a view was acknowledged — never who saw what. Your IP address is never stored in a readable form, and you can wipe everything tied to you in one click.</p>
+    </div>
+
+    <nav class="legal-toc" aria-label="Contents">
+      <ol>
+        <li><a href="#collect">What we collect</a></li>
+        <li><a href="#notcollect">What we deliberately do not collect</a></li>
+        <li><a href="#ip">How your IP address is handled</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#pi">Pi sign-in</a></li>
+        <li><a href="#donations">Donations</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#thirdparty">Third parties your browser contacts</a></li>
+        <li><a href="#retention">How long we keep things</a></li>
+        <li><a href="#rights">Your control over your data</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="collect">1. What we collect</h2>
+    <p>When you run the latency test and the result is saved, the record contains:</p>
+    <ul>
+      <li>The measured round-trip time to each service, and whether each one responded.</li>
+      <li>The name of your internet provider and its autonomous system number, and an approximate city — all derived from your IP address, not from your device.</li>
+      <li>Your browser family and operating system family, for example "Firefox" and "Android". Not a full user-agent string.</li>
+      <li>A timestamp.</li>
+      <li>A non-reversible hash of your IP address, used only to spot duplicate submissions.</li>
+      <li>If you are signed in, your Pi identifier, your username, and which permissions you granted.</li>
+    </ul>
+    <p>Server logs also record ordinary request information for a short period, as any web server does.</p>
+
+    <h2 id="notcollect">2. What we deliberately do not collect</h2>
+    <ul>
+      <li>No advertising or marketing identifiers of our own, no cross-site tracking, and no third-party analytics scripts.</li>
+      <li>No browser fingerprinting.</li>
+      <li>No email address, phone number, or real name. We never ask for them.</li>
+      <li>No speed test results. Those are produced inside the OpenSpeedTest widget, and your browser's same-origin policy prevents this page from reading them. Even if we wanted them, we could not have them.</li>
+      <li>No wallet balance, keys, or transaction history.</li>
+    </ul>
+
+    <h2 id="ip">3. How your IP address is handled</h2>
+    <p>Your IP address is used in the moment, then discarded. It is used to look up your provider and approximate city, and it is hashed with a secret salt so that repeat submissions can be recognised without the address itself being kept. The stored value cannot be turned back into your IP address, and without the salt it cannot be matched against a list of candidate addresses either.</p>
+    <p>Approximate location means city-level at best, and often only the location of your provider's equipment rather than yours.</p>
+
+    <h2 id="cookies">4. Cookies</h2>
+    <p>This site sets two cookies and no others. Neither is used for advertising or tracking across sites.</p>
+    <ul>
+      <li><b>An anonymous identifier</b>, so that results you save without signing in come back to you in this browser. It contains a random value and nothing else.</li>
+      <li><b>A session cookie</b>, set only if you sign in with Pi. It holds a random token; the copy on our server is stored hashed.</li>
+    </ul>
+    <p>Both are <code>HttpOnly</code>, so page scripts cannot read them. Clearing your browser data removes them, and with the anonymous one, the link to any results saved under it.</p>
+    <p>Your theme choice is kept in local storage on your own device and never sent anywhere.</p>
+
+    <h2 id="pi">5. Pi sign-in</h2>
+    <p>Sign-in is optional. When you use it, the Pi platform gives us an access token, which our server exchanges with the Pi Platform API for your identifier and username. That identifier is scoped to this application: it identifies you here and cannot be used to recognise you in any other Pi app.</p>
+    <p>We request only the scopes the app needs — your username, and inside the Pi Browser the payments scope that Pi requires for the sign-in call to succeed. We never receive your password or wallet keys.</p>
+    <p>Signing in moves results you saved anonymously in this browser onto your account, so that nothing is lost when you sign in.</p>
+
+    <h2 id="donations">6. Donations</h2>
+    <p>If you donate, we store the payment identifier, the amount, the transaction id, the status, your Pi username, and the message you chose to attach. That message may be shown publicly on this site beside your username, so treat it as public.</p>
+    <p>The payment itself is processed by the Pi platform and recorded on the Pi Blockchain, which is public and permanent by design and outside our control.</p>
+
+    <h2 id="ads">7. Advertising</h2>
+    <p>The site may show a short advert before sign-in and before the latency test, delivered by the Pi Developer Ad Network. What that means for your data:</p>
+    <ul>
+      <li><b>We do not target adverts.</b> We send the ad network nothing about you. We ask it for an advert; it decides what to show.</li>
+      <li><b>What we store about an advert</b> is the identifier Pi gives that view, which part of the site it appeared in, whether the ad network acknowledged it, and the time. For a rewarded advert, and only then, the identifier of the signed-in account is stored with it so the same view cannot be counted twice.</li>
+      <li><b>We do not learn what the advert was</b>, who paid for it, or whether you found it interesting.</li>
+      <li><b>The ad network is its own controller.</b> Pi's own privacy terms govern what it collects while an advert is displayed, and interacting with an advert hands you to the advertiser.</li>
+      <li><b>No advert is shown during a measurement</b>, and repeated automatic latency runs are never interrupted by one.</li>
+    </ul>
+    <p>If the operator switches advertising off, nothing in this section applies and no ad records are created.</p>
+
+    <h2 id="thirdparty">8. Third parties your browser contacts</h2>
+    <p>Using this site causes your browser to make requests to parties other than us. We do not send them any information about you beyond what an ordinary web request necessarily reveals, chiefly your IP address:</p>
+    <ul>
+      <li><b>OpenSpeedTest</b> — the speed test widget and its measurement traffic.</li>
+      <li><b>The services in the latency list</b> — Google, Cloudflare, YouTube, GitHub, Wikipedia, Amazon, Microsoft, Discord, Steam and Telegram. Each probe is an ordinary anonymous request for one small static file, sent with cookies and credentials switched off.</li>
+      <li><b>Pi</b> — if you sign in, donate, or are shown an advert.</li>
+      <li><b>An IP geolocation provider</b> — the server, not your browser, sends your IP address to look up your provider name and city. This can be switched off entirely by the operator.</li>
+    </ul>
+    <p>All fonts and styles are served from this site. The only external script is the Pi SDK, which is required for sign-in, payments and adverts, and which is loaded from Pi's own domain.</p>
+
+    <h2 id="retention">9. How long we keep things</h2>
+    <ul>
+      <li>Latency results: the most recent hundred runs per person. Older ones are deleted automatically as new ones arrive.</li>
+      <li>Sessions: they expire on their own, by default after thirty days, and are removed when you sign out.</li>
+      <li>Donation records: kept for as long as the site operates, for accounting.</li>
+      <li>Advert records: kept for as long as the site operates, so a rewarded view cannot be claimed twice.</li>
+      <li>Leaderboard and reward records: kept for as long as the site operates.</li>
+      <li>Server logs: short-lived, and rotated by the server.</li>
+    </ul>
+
+    <h2 id="rights">10. Your control over your data</h2>
+    <ul>
+      <li><b>See it</b> — your results are on the history section of the home page, and the CSV export gives you the same data as a file.</li>
+      <li><b>Delete it</b> — "Clear history" removes every result tied to you, immediately and permanently. If you are signed in, that covers every device.</li>
+      <li><b>Stop being identified</b> — sign out, and clear your browser data for this site to drop the anonymous identifier.</li>
+      <li><b>Ask us</b> — if you want a donation record removed or a question answered, write to the address below.</li>
+    </ul>
+    <p>Because we hold no email address or real name, we may not be able to connect a request to a record without the payment identifier or a signed-in session.</p>
+
+    <h2 id="security">11. Security</h2>
+    <p>The site is served over HTTPS only. Session tokens are stored hashed, IP addresses are stored hashed with a secret salt, and the server API key used for payments never leaves the server. A strict Content Security Policy limits what the page may load and where it may connect. No system is perfect, and we make no guarantee of absolute security.</p>
+
+    <h2 id="children">12. Children</h2>
+    <p>This site is not directed at children and collects no information that identifies anyone personally. The Pi platform sets its own age requirements for its accounts.</p>
+
+    <h2 id="changes">13. Changes</h2>
+    <p>If this policy changes, the date at the top changes with it. Material changes will be noted on the site itself rather than made quietly.</p>
+
+    <h2 id="contact">14. Contact</h2>
+    <p>Questions, or a request about your data: <a id="contact-mail" href="#">—</a></p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-bottom">
+    <span><a href="/">Back to Internet Speed</a></span>
+    <span><a href="/legal/terms">Terms of Service</a></span>
+  </div>
+</footer>
+</body>
+</html>

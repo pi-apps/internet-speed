@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>Internet Speed — Speed &amp; Latency Test for Pi Network</title>
+<meta name="description" content="Run a speed test and measure your latency to Google, Cloudflare, YouTube, GitHub and other major services. No signup, no plugins.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Internet Speed — Speed &amp; Latency Test">
+<meta property="og:description" content="Measure your speed, then see how far you really are from the services you use every day.">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Internet Speed">
+<script type="module" src="/js/app.js"></script>
+</head>
+
+<body>
+<a class="skip" href="#test">Skip to the speed test</a>
+
+<header class="site-header" id="header">
+  <span class="scroll-progress" id="scroll-progress" aria-hidden="true"></span>
+  <div class="wrap header-inner">
+    <a class="brand" href="#test">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16"
+              fill="none" stroke="var(--dl)" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span>
+        <span data-brand-name>Internet Speed</span>
+        <span class="brand-sub">Speed &amp; latency</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <span class="nav-group">Measure</span>
+        <a href="#test"><i class="nav-dot" style="--c:var(--dl)"></i>Speed test</a>
+        <a href="#latency"><i class="nav-dot" style="--c:var(--lat)"></i>Latency</a>
+        <a href="#leaderboard"><i class="nav-dot" style="--c:var(--ul)"></i>Leaderboard</a>
+
+        <span class="nav-group">Results</span>
+        <a href="/stats"><i class="nav-dot" style="--c:var(--dl)"></i>Statistics</a>
+        <a href="/requirements"><i class="nav-dot" style="--c:var(--lat)"></i>Requirements</a>
+
+        <span class="nav-group">More</span>
+        <a href="/guide"><i class="nav-dot" style="--c:var(--ul)"></i>Guide &amp; FAQ</a>
+        <a href="/news"><i class="nav-dot" style="--c:var(--dl)"></i>News</a>
+        <a href="/about"><i class="nav-dot" style="--c:var(--lat)"></i>About</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-account" id="drawer-account">
+          <span class="pi-glyph avatar" aria-hidden="true">π</span>
+          <div class="drawer-account-text">
+            <b id="drawer-account-name">Not signed in</b>
+            <span class="muted" id="drawer-account-note">Sign in with Pi to save your history and enter the leaderboard.</span>
+          </div>
+          <button class="btn btn-primary btn-sm" id="drawer-signin" type="button">Sign in</button>
+        </div>
+
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+        <div class="drawer-section">
+          <a class="btn btn-ghost hidden" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+            <span class="pi-glyph" aria-hidden="true">π</span>
+            <span data-network-label>Open the Mainnet site</span>
+          </a>
+          <div class="drawer-legal">
+            <a href="/legal/terms">Terms</a>
+            <a href="/legal/privacy">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <a class="btn btn-ghost btn-sm mainnet-btn hidden" data-network-link
+         href="#" target="_blank" rel="noopener noreferrer">
+        <span class="pi-glyph" aria-hidden="true">π</span>
+        <span class="mainnet-short" data-network-name>Mainnet</span>
+      </a>
+      <button class="btn btn-primary btn-sm pi-btn" id="pi-auth" type="button">
+        <span class="pi-glyph" aria-hidden="true">π</span><span id="pi-auth-label">Sign in</span>
+      </button>
+
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="section hero" id="test">
+  <div class="wrap boot">
+
+    <div class="hero-head">
+     <div>
+      <span class="eyebrow">Speed &amp; latency</span>
+      <h1>See what your connection <em>actually</em> delivers.</h1>
+      <p class="hero-lead">
+        Measure your speed, then find out how far you really are from the services
+        you use every day. No signup, no plugins, nothing to install.
+      </p>
+      <div class="chips">
+        <span class="chip" id="chip-isp"><span class="dot"></span>Detecting your provider…</span>
+        <span class="chip" id="chip-ip">IP <b>—</b></span>
+        <span class="chip">Engine: OpenSpeedTest</span>
+      </div>
+
+     </div>
+
+
+      <aside class="mainnet-banner hidden" id="mainnet-banner">
+        <span class="pi-glyph avatar" aria-hidden="true">π</span>
+        <div>
+          <b data-network-when="testnet" class="hidden">This is the Testnet version</b>
+          <b data-network-when="mainnet" class="hidden">This is the live Mainnet site</b>
+          <span class="muted hidden" data-network-when="testnet">Everything works the same, but any Pi involved is test Pi.</span>
+          <span class="muted hidden" data-network-when="mainnet">Real Pi is used here. Want to try things out safely first?</span>
+        </div>
+        <a class="btn btn-primary" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+          <span data-network-label>Open the Mainnet site</span>
+        </a>
+      </aside>
+    </div>
+
+    <div class="console spotlight" id="console" data-booting="false">
+      <div class="console-bar">
+        <span class="console-title" id="widget-status"><span class="dot"></span>Loading the test widget…</span>
+      </div>
+
+      <!-- OST Widget code start -->
+      <div class="engine" id="widget" data-loaded="false">
+        <div class="engine-placeholder">
+          <div class="skeleton" style="width:min(420px,70vw);height:14px"></div>
+          <p class="muted">
+            The widget loads from the OpenSpeedTest servers. If it takes more than
+            a few seconds, check your connection.
+          </p>
+        </div>
+      </div>
+      <p class="ost-credit">
+        Provided by <a href="https://openspeedtest.com" rel="noopener">OpenSpeedtest.com</a>
+      </p>
+      <!-- OST Widget code end -->
+    </div>
+    <div class="card donate spotlight" id="donate">
+      <div class="donate-head">
+        <span class="pi-glyph avatar" aria-hidden="true">π</span>
+        <div>
+          <h3 style="margin:0">Support this project</h3>
+          <p class="muted" style="margin:2px 0 0;font-size:var(--f-sm)">
+            The site is free and carries no ads. If it has been useful, a small
+            donation in Pi helps keep the server running.
+          </p>
+        </div>
+        <span class="muted donate-totals" id="donate-totals"></span>
+      </div>
+
+      <p class="donate-notice hidden" id="donate-notice"></p>
+
+      <p class="ads-note muted hidden" id="ads-note"></p>
+
+      <div class="donate-gate hidden" id="donate-gate">
+        <p class="muted" style="margin:0">
+          Donations come from your own Pi Wallet, so you have to be signed in first.
+        </p>
+        <button class="btn btn-primary" id="donate-signin" type="button">
+          <span class="pi-glyph" aria-hidden="true">π</span> Sign in with Pi
+        </button>
+      </div>
+
+      <div id="donate-form">
+        <div class="donate-row">
+          <label class="field donate-amount-field">
+            <span>Amount (π)</span>
+            <input id="donate-amount" type="number" min="0.01" step="0.01" value="1" inputmode="decimal">
+          </label>
+          <div class="segment" id="donate-presets" role="group" aria-label="Suggested amounts"></div>
+        </div>
+
+        <label class="field" style="margin-top:var(--s3)">
+          <span>Message (sent with the transaction)</span>
+          <input id="donate-memo" type="text" placeholder="e.g. Thanks for the latency test!">
+        </label>
+        <p class="muted" id="donate-memo-count" style="font-size:var(--f-xs);margin:4px 0 0"></p>
+        <p class="muted" style="font-size:var(--f-xs);margin:2px 0 0">
+          This text travels with the payment as its memo, so it is visible when the
+          transaction is reviewed. Keep it short — wallets may shorten long messages.
+        </p>
+
+        <div class="button-row" style="margin-bottom:0">
+          <button class="btn btn-primary btn-lg" id="donate-send" type="button">Donate with Pi</button>
+        </div>
+
+        <p class="donate-status hidden" id="donate-status"></p>
+      </div>
+
+      <div id="donate-recent"></div>
+
+      <div class="mainnet-cta hidden" data-network-block data-network-only="testnet">
+        <div>
+          <b>Prefer to donate on Mainnet?</b>
+          <span class="muted">This instance runs on Testnet, so donations here are test Pi.</span>
+        </div>
+        <a class="btn btn-primary btn-lg" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+          <span class="pi-glyph" aria-hidden="true">π</span>
+          <span data-network-label>Open the Mainnet site</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="section" id="latency" data-reveal>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Reach</span>
+      <h2>Latency to major services</h2>
+      <p>
+        Speed tells you how much data fits down the pipe. Latency tells you how long
+        it takes to get there — and that is what you actually feel in games, video
+        calls, and every click on a website. A page load makes dozens of round trips
+        before it finishes, so 200 ms of latency costs you far more than the numbers
+        suggest.
+      </p>
+    </div>
+
+    <div class="card panel spotlight">
+      <div class="panel-bar">
+        <div>
+          <h3 style="margin:0">Round-trip time from your browser</h3>
+          <p class="muted" style="margin:4px 0 0;font-size:var(--f-sm)" id="ping-progress"></p>
+        </div>
+        <div class="panel-actions">
+          <button class="btn btn-primary btn-sm" id="ping-start" type="button">Run latency test</button>
+          <button class="btn btn-ghost btn-sm hidden" id="ping-stop" type="button">Stop</button>
+        </div>
+      </div>
+
+      <div class="monitor-bar">
+        <div class="monitor-field">
+          <span class="drawer-label" style="margin:0">Repeat automatically</span>
+          <div class="segment" id="monitor-presets" role="group" aria-label="Monitor interval">
+            <button type="button" data-value="0" aria-pressed="true">Off</button>
+            <button type="button" data-value="60">1 min</button>
+            <button type="button" data-value="300">5 min</button>
+            <button type="button" data-value="900">15 min</button>
+          </div>
+        </div>
+        <span class="monitor-status muted" id="monitor-status"></span>
+      </div>
+
+      <ul class="probes" id="ping-list"></ul>
+
+      <div class="summary hidden" id="ping-summary">
+        <div class="summary-main">
+          <div>
+            <div class="summary-label">Median latency</div>
+            <div><span class="summary-value num" id="summary-median">—</span>
+              <span class="readout-unit">ms</span></div>
+          </div>
+          <div class="summary-verdict" id="summary-verdict" data-tone="">—</div>
+        </div>
+        <div class="summary-grid">
+          <div><span class="summary-label">Reachable</span><b id="summary-reach">—</b></div>
+          <div><span class="summary-label">Closest</span><b id="summary-fastest">—</b></div>
+          <div><span class="summary-label">Furthest</span><b id="summary-slowest">—</b></div>
+          <div><span class="summary-label">Versus everyone here</span><b id="summary-versus">—</b></div>
+        </div>
+
+        <div class="button-row" style="margin-bottom:0">
+          <button class="btn btn-primary btn-sm" id="share-result" type="button">Share result</button>
+          <button class="btn btn-ghost btn-sm" id="copy-result" type="button">Copy as text</button>
+        </div>
+      </div>
+    </div>
+
+    <details class="acc" style="margin-top:var(--s4)">
+      <summary>How to read these numbers</summary>
+      <div class="acc-body">
+        <p>The colour of each result is a rough band, not a verdict:</p>
+        <ul>
+          <li><b style="color:var(--ok)">Under 80 ms</b> — everything feels immediate. Fine for competitive gaming and video calls.</li>
+          <li><b style="color:var(--ul)">80 to 200 ms</b> — comfortable for browsing and streaming; noticeable in fast-paced games.</li>
+          <li><b style="color:var(--warn)">Over 200 ms</b> — pages feel sluggish even when the connection is fast, because every round trip costs.</li>
+        </ul>
+        <p>A single slow service among fast ones usually points at routing or peering to that provider, not at your line. If everything is slow together, look at your own connection first — the troubleshooting guide below starts with the cheapest checks.</p>
+        <p class="muted">Distance sets a floor no provider can beat: light in fibre covers roughly 200 km per millisecond, and a round trip pays that twice. A server on another continent will never answer in 20 ms.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>How this is measured, and what the number really means</summary>
+      <div class="acc-body">
+        <p>
+          A browser cannot send ICMP packets, so this is not the same as <code>ping</code>
+          on the command line. Each probe is a real HTTPS request to a tiny file on the
+          target's own network, and we time how long it takes to come back.
+        </p>
+        <p>
+          That means the figure includes DNS, the TCP handshake, the TLS handshake and one
+          HTTP round trip — so it reads higher than a command-line ping, often by a good
+          margin. The first sample pays for all that setup and is thrown away; later samples
+          reuse the open connection and land much closer to the true round-trip time. We
+          report the fastest of those.
+        </p>
+        <p>
+          Comparing targets against each other, or watching the same target over days, is
+          meaningful and useful. Comparing the absolute number against <code>ping</code>
+          output is not.
+        </p>
+        <p class="muted">
+          Nothing is sent to these services beyond an ordinary anonymous request for a small
+          static file, with cookies and credentials switched off.
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="section" id="leaderboard" data-reveal>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Daily</span>
+      <h2>Leaderboard</h2>
+      <p>
+        Every signed-in run counts, and only your best one for the day is ranked.
+        The score is the average round-trip time across the services that answered,
+        so a low number means a genuinely fast route, not one lucky probe.
+      </p>
+    </div>
+
+    <div class="account" id="account-banner" data-state="anon">
+      <span class="pi-glyph avatar" aria-hidden="true">π</span>
+      <div class="account-text">
+        <b id="account-title">Not signed in</b>
+        <span class="muted" id="account-note">
+          Results are tied to this browser only. Sign in with Pi to keep them on your account
+          and to enter the daily leaderboard.
+        </span>
+      </div>
+      <div class="account-actions">
+        <button class="btn btn-primary btn-sm" id="account-signin" type="button">Sign in with Pi</button>
+        <button class="btn btn-ghost btn-sm hidden" id="account-signout" type="button">Sign out</button>
+      </div>
+    </div>
+
+    <div class="debug-panel hidden" id="auth-debug">
+      <div class="debug-head">
+        <b>Sign-in diagnostics</b>
+        <button class="btn btn-ghost btn-sm" id="auth-debug-copy" type="button">Copy</button>
+      </div>
+      <pre id="auth-debug-body"></pre>
+    </div>
+
+    <div class="card panel spotlight" id="leaderboard-panel">
+      <div class="panel-bar">
+        <div>
+          <h3 style="margin:0" id="board-title">Today</h3>
+          <p class="muted" style="margin:2px 0 0;font-size:var(--f-sm)" id="board-note"></p>
+        </div>
+        <div class="panel-actions">
+          <div class="segment" id="board-days" role="group" aria-label="Day">
+            <button type="button" data-day="today" aria-pressed="true">Today</button>
+            <button type="button" data-day="yesterday">Yesterday</button>
+          </div>
+        </div>
+      </div>
+
+      <ol class="board" id="board-list"></ol>
+
+      <div class="board-empty" id="board-empty">
+        No qualifying runs yet. Sign in with Pi and run the latency test to enter.
+      </div>
+
+      <div class="reward-bar hidden" id="reward-bar">
+        <span class="pi-glyph avatar" aria-hidden="true">π</span>
+        <div class="reward-text">
+          <b id="reward-title">Daily reward</b>
+          <span class="muted" id="reward-note"></span>
+        </div>
+        <button class="btn btn-primary hidden" id="reward-claim" type="button">Claim reward</button>
+        <button class="btn btn-ghost hidden" id="board-share" type="button">Share standing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="latest-news" data-reveal>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Updates</span>
+      <h2>Latest news</h2>
+      <p>Changes to the site, and notes on how it measures things.</p>
+    </div>
+    <div id="news-latest"></div>
+    <div class="button-row">
+      <a class="btn btn-ghost btn-sm" href="/news">All updates</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4 data-brand-name>Internet Speed</h4>
+        <p style="font-size:var(--f-sm)" data-brand-tagline>Your real internet speed.</p>
+      </div>
+      <div>
+        <h4>Measure</h4>
+        <ul>
+          <li><a href="#test">Speed test</a></li>
+          <li><a href="#latency">Latency test</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="/stats">Statistics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/requirements">Speed requirements</a></li>
+          <li><a href="/guide">Troubleshooting guide</a></li>
+          <li><a href="/guide#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Technical</h4>
+        <ul>
+          <li><a href="/stats">Public statistics</a></li>
+          <li><a href="https://openspeedtest.com" rel="noopener">About OpenSpeedTest</a></li>
+          <li><a href="/api/health">Service status</a></li>
+          <li class="hidden" id="footer-admin"><a href="/admin">Admin dashboard</a></li>
+          <li class="hidden" data-network-block>
+            <a data-network-link href="#" target="_blank" rel="noopener noreferrer">
+              <span data-network-label>Open the Mainnet site</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-grid" style="margin-top:var(--s5)">
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/terms">Terms of Service</a></li>
+          <li><a href="/legal/privacy">Privacy Policy</a></li>
+          <li><a href="https://github.com/pi-apps/PiOS/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Open-source license</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Speed engine: OpenSpeedTest — open source and free</span>
+      <span>We do not store your IP address.</span>
+      <span class="muted">build <span id="build-stamp" class="num">—</span></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is the difference between megabits and megabytes?","acceptedAnswer":{"@type":"Answer","text":"Connection speed is measured in megabits per second and file sizes in megabytes. One megabyte is eight megabits."}},
+    {"@type":"Question","name":"Why is browser latency higher than command-line ping?","acceptedAnswer":{"@type":"Answer","text":"A browser cannot send ICMP packets, so each probe is a full HTTPS request including DNS, TCP, TLS and one HTTP round trip, which costs extra milliseconds."}},
+    {"@type":"Question","name":"Why is my speed lower than what I pay for?","acceptedAnswer":{"@type":"Answer","text":"Advertised speed is a ceiling for the line. Wi-Fi, the router, other devices and network congestion all take a share of it."}}
+  ]
+}
+</script>
+</body>
+</html>

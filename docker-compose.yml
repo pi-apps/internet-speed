@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Set to false if you are not paying rewards; it drops pi-backend and
+        # the Stellar dependency tree from the image.
+        INSTALL_OPTIONAL: "true"
+    container_name: internet-speed
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      PORT: 8080
+      TRUST_PROXY: '1'
+    ports:
+      - '127.0.0.1:8080:8080'
+    volumes:
+      - ./data:/app/data

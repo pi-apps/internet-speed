@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>Terms of Service — Internet Speed</title>
+<meta name="description" content="The terms that apply when you use Internet Speed: what the service does, what it does not promise, and the rules around donations.">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Internet Speed">
+<script type="module" src="/js/legal.js"></script>
+</head>
+<body>
+<a class="skip" href="#doc">Skip to the document</a>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Speed &amp; latency</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/legal/terms" aria-current="page">Terms</a>
+        <a href="/legal/privacy">Privacy</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-tools">
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap legal" id="doc">
+  <article class="legal-doc">
+    <span class="eyebrow">Legal</span>
+    <h1 style="font-size:var(--f-2xl)">Terms of Service</h1>
+
+    <div class="legal-meta">
+      <span>Last updated: <b id="updated">—</b></span>
+      <span>Applies to: <b id="host">this site</b></span>
+    </div>
+
+    <div class="legal-key">
+      <p><b>The short version.</b> This is a free measurement tool, paid for by advertising and voluntary donations. Use it for anything lawful. The numbers are best-effort estimates, not guarantees, and nothing here is a contract about your internet connection. Donations are not refundable.</p>
+    </div>
+
+    <nav class="legal-toc" aria-label="Contents">
+      <ol>
+        <li><a href="#accept">Accepting these terms</a></li>
+        <li><a href="#service">What the service is</a></li>
+        <li><a href="#accuracy">Accuracy and limitations</a></li>
+        <li><a href="#accounts">Pi accounts and sign-in</a></li>
+        <li><a href="#donations">Donations</a></li>
+        <li><a href="#acceptable">Acceptable use</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#thirdparty">Third-party services</a></li>
+        <li><a href="#ip">Intellectual property</a></li>
+        <li><a href="#warranty">No warranty</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#changes">Changes and availability</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="accept">1. Accepting these terms</h2>
+    <p>By using this site you agree to what follows. If you do not agree, please stop using it. If you use the site on behalf of an organisation, you confirm you may accept these terms for it.</p>
+
+    <h2 id="service">2. What the service is</h2>
+    <p>The site offers three things:</p>
+    <ul>
+      <li>An embedded speed test provided by OpenSpeedTest, which runs on their servers and measures download and upload throughput.</li>
+      <li>A latency test that measures round-trip time from your browser to a list of well-known public services.</li>
+      <li>Optional storage of your own latency results, and aggregate anonymous statistics built from everyone's results.</li>
+    </ul>
+    <p>The service is provided free of charge and is funded by advertising and voluntary donations. No account is required for any measurement feature; an account is needed only to save results across devices, to enter the leaderboard, or to donate.</p>
+
+    <h2 id="accuracy">3. Accuracy and limitations</h2>
+    <p>Every figure on this site is an estimate produced under conditions we do not control. In particular:</p>
+    <ul>
+      <li>Results depend on your device, browser, Wi-Fi, router, local network, provider, and the load on the servers being measured.</li>
+      <li>The latency test measures a full HTTPS round trip, including DNS, TCP and TLS. It reads higher than a command-line <code>ping</code> and is not a substitute for it.</li>
+      <li>Speed test results are produced entirely by OpenSpeedTest. We do not see, verify, or store them.</li>
+      <li>Aggregate statistics reflect only the people who happened to test here, and are not a representative survey of any provider or country.</li>
+    </ul>
+    <p>Do not rely on these numbers where accuracy matters legally or commercially — for a contractual dispute with a provider, for example, use the measurement method that provider or your regulator recognises.</p>
+
+    <h2 id="accounts">4. Pi accounts and sign-in</h2>
+    <p>Signing in with Pi is optional and only links your saved results to your Pi account so they follow you across devices. You are responsible for keeping access to your own Pi account secure. We can only see the identifier and username the Pi Platform gives us; we never see your password, wallet keys, or balance.</p>
+    <p>We may end a session, or decline to create one, if we detect abuse. You can sign out at any time, and you can delete your stored results at any time from the history section.</p>
+
+    <h2 id="donations">5. Donations</h2>
+    <p>Donations are entirely voluntary and buy nothing. There is no premium tier, and no feature is withheld from people who do not donate.</p>
+    <ul>
+      <li>Payments are handled by the Pi platform. We never hold your wallet credentials and cannot move funds on your behalf.</li>
+      <li>Blockchain transactions cannot be reversed by us. Donations are non-refundable.</li>
+      <li>A message you attach to a donation travels with the payment and is stored with the donation record. It may be shown publicly next to your Pi username on this site, so do not include anything private.</li>
+      <li>Where this deployment runs on the Pi Testnet, any Pi involved is test Pi with no monetary value. The site says so plainly next to the donate button.</li>
+      <li>You are responsible for any tax treatment of a donation in your own jurisdiction.</li>
+    </ul>
+
+    <h2 id="acceptable">6. Acceptable use</h2>
+    <p>Please do not:</p>
+    <ul>
+      <li>Automate the tests at a volume that degrades the service for others, or drives load at the third-party services being measured.</li>
+      <li>Attempt to gain access to accounts, data, or infrastructure that is not yours.</li>
+      <li>Submit fabricated results in order to distort the public statistics or to win a reward you did not earn.</li>
+      <li>Fake, automate or interfere with advert views.</li>
+      <li>Use the site to break the law where you are, or to interfere with anyone else's network.</li>
+    </ul>
+    <p>We rate-limit requests and may block access that looks abusive. That is a technical measure, not a judgement about you, and it is usually temporary.</p>
+
+    <h2 id="ads">7. Advertising</h2>
+    <p>The site may show a short advert before you sign in and before you start the latency test. Adverts are delivered by the Pi Developer Ad Network; we do not choose the individual advert, sell the space directly, or receive anything about you from the advertiser.</p>
+    <ul>
+      <li>Where an advert is shown, the site says so before it appears.</li>
+      <li>Adverts are never shown during a measurement, and automatic repeated latency runs are never interrupted by one.</li>
+      <li>If an advert fails to load, the feature still works. We do not withhold measurements because an advert was unavailable.</li>
+      <li>For a rewarded advert, our server asks the Pi Platform API whether the ad network acknowledged the view. We store that answer, the identifier of the advert, and which part of the site it was shown in. We receive nothing about the content of the advert or about you from it.</li>
+      <li>Interacting with an advert takes you to the advertiser, whose own terms and privacy policy then apply. We are not responsible for what they say or sell.</li>
+    </ul>
+    <p>Adverts may be added, changed or removed at any time, and the operator may switch them off entirely. Nothing here is a promise that the site will always carry advertising, or that it never will.</p>
+    <p>Attempting to automate, fake or interfere with advert views — for example by calling the verification endpoint directly — is a breach of the acceptable use section below and may result in your access being blocked.</p>
+
+    <h2 id="thirdparty">8. Third-party services</h2>
+    <p>Using this site involves services we do not operate: OpenSpeedTest for the speed test, the Pi platform for sign-in, payments and advertising, and the public services measured by the latency test. Their own terms and privacy policies apply to what they do. We cannot guarantee their availability or behaviour.</p>
+
+    <h2 id="ip">9. Intellectual property</h2>
+    <p>The name, design, and code of this site belong to its operator. OpenSpeedTest is an independent open-source project, used here under its own licence, and the credit link beneath the widget is part of that arrangement — please do not remove it if you reuse this code. Pi, Pi Network, and Pi Browser are trademarks of their respective owner; this site is an independent application and is not endorsed by them.</p>
+
+    <h2 id="warranty">10. No warranty</h2>
+    <p>The service is provided as-is and as-available, without warranties of any kind, whether express or implied, including fitness for a particular purpose and non-infringement. We do not warrant that the service will be uninterrupted, timely, or error-free, or that any measurement is accurate.</p>
+
+    <h2 id="liability">11. Limitation of liability</h2>
+    <p>To the fullest extent the law allows, the operator of this site is not liable for indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profit, or goodwill, arising from your use of the service or from reliance on any measurement it produces. Nothing here limits liability that cannot be limited by law.</p>
+
+    <h2 id="changes">12. Changes and availability</h2>
+    <p>These terms may change. The date at the top reflects the last revision, and continuing to use the site after a change means you accept it. The service itself may be modified, suspended, or discontinued at any time — it is offered free and without any commitment to keep running.</p>
+
+    <h2 id="contact">13. Contact</h2>
+    <p>Questions about these terms: <a id="contact-mail" href="#">—</a></p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-bottom">
+    <span><a href="/">Back to Internet Speed</a></span>
+    <span><a href="/legal/privacy">Privacy Policy</a></span>
+  </div>
+</footer>
+</body>
+</html>
