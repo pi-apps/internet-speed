@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>Statistics and history — Internet Speed</title>
+<meta name="description" content="Aggregate latency statistics, your own measurement history, and the details of your connection.">
+<meta name="color-scheme" content="dark light">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<script type="module" src="/js/stats-page.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="site-header" id="header">
+  <span class="scroll-progress" id="scroll-progress" aria-hidden="true"></span>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Speed &amp; latency</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/latency">Latency</a>
+        <a href="/stats" aria-current="page">Statistics</a>
+        <a href="/guide">Guide</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+        <div class="drawer-section">
+          <a class="btn btn-ghost hidden" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+            <span class="pi-glyph" aria-hidden="true">&#960;</span><span data-network-label>Other network</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <button class="btn btn-primary btn-sm pi-btn" id="pi-auth" type="button">
+        <span class="pi-glyph" aria-hidden="true">&#960;</span><span id="pi-auth-label">Sign in</span>
+      </button>
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap section" id="main">
+  <div class="section-head">
+    <span class="eyebrow">Aggregate</span>
+    <h1 style="font-size:var(--f-2xl)">Statistics and your history</h1>
+    <p>Averages across everyone who has tested here, the runs saved against your browser or Pi account, and the connection every number depends on.</p>
+  </div>
+
+
+    
+
+    <div class="account" id="account-banner" data-state="anon">
+      <span class="pi-glyph avatar" aria-hidden="true">π</span>
+      <div class="account-text">
+        <b id="account-title">Not signed in</b>
+        <span class="muted" id="account-note">
+          Results are tied to this browser only. Sign in with Pi to keep them on your account
+          and see the same history on any device.
+        </span>
+      </div>
+      <div class="account-actions">
+        <button class="btn btn-primary btn-sm" id="account-signin" type="button">Sign in with Pi</button>
+        <button class="btn btn-ghost btn-sm hidden" id="account-signout" type="button">Sign out</button>
+      </div>
+    </div>
+    <div class="debug-panel hidden" id="auth-debug">
+      <div class="debug-head">
+        <b>Sign-in diagnostics</b>
+        <button class="btn btn-ghost btn-sm" id="auth-debug-copy" type="button">Copy</button>
+      </div>
+      <pre id="auth-debug-body"></pre>
+    </div>
+
+    <svg class="chart" id="history-chart"></svg>
+    <div class="chart-empty hidden" id="history-chart-empty">
+      Run the latency test a couple of times and a trend line will appear here.
+    </div>
+
+    <div class="button-row">
+      <button class="btn btn-ghost btn-sm" id="history-refresh" type="button">Refresh</button>
+      <a class="btn btn-ghost btn-sm" href="/api/runs/mine.csv">Export CSV</a>
+      <button class="btn btn-danger btn-sm" id="history-clear" type="button">Clear history</button>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th><th>Median</th><th>Closest target</th>
+            <th>Reached</th><th>Provider</th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+    </div>
+    <p class="muted hidden" id="history-empty" style="margin-top:var(--s4)">
+      No runs yet. Your first latency test will appear here.
+    </p>
+  <h2 class="section-sub">Public statistics</h2>
+    
+
+    <div class="grid-3" id="stats-cards">
+      <div class="skeleton" style="height:88px"></div>
+      <div class="skeleton" style="height:88px"></div>
+      <div class="skeleton" style="height:88px"></div>
+    </div>
+
+    <h3 class="section-sub">Latency by service</h3>
+    <p>Lower is closer. A low reach rate means the service is often blocked or unavailable for visitors here.</p>
+    <div class="table-scroll" id="target-wrap">
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Average</th><th>Best</th><th>Reached</th><th>Samples</th></tr>
+        </thead>
+        <tbody id="target-body"></tbody>
+      </table>
+    </div>
+    <p class="muted hidden" id="target-empty">Not enough samples yet.</p>
+
+    <h3 class="section-sub">Latency through the day</h3>
+    <p>If the line climbs in the evening, the problem is not your connection — the network is busy.</p>
+    <svg class="chart" id="hourly-chart"></svg>
+    <div class="chart-empty hidden" id="hourly-empty">Not enough data for this chart yet.</div>
+
+    <h3 class="section-sub">Providers compared</h3>
+    <p>Based on the last 30 days. Providers with fewer than three runs are hidden.</p>
+    <div class="table-scroll" id="isp-wrap">
+      <table>
+        <thead><tr><th>Provider</th><th>Average latency</th><th>Runs</th></tr></thead>
+        <tbody id="isp-body"></tbody>
+      </table>
+    </div>
+    <p class="muted hidden" id="isp-empty">Not enough runs to compare providers yet.</p>
+  <h2 class="section-sub">Your connection</h2>
+    
+    <div class="grid-2">
+      <div>
+        <div id="conn-info">
+          <div class="skeleton" style="height:52px;margin-bottom:8px"></div>
+          <div class="skeleton" style="height:52px;margin-bottom:8px"></div>
+          <div class="skeleton" style="height:52px"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Why does the result change every time?</h3>
+        <p>Internet speed is not a fixed number, it is a range. Data travels from your device to the server through several bottlenecks, and any one of them can lower the ceiling:</p>
+        <ul>
+          <li>A crowded Wi-Fi channel, or too much distance to the router</li>
+          <li>Other devices downloading at the same time</li>
+          <li>Congestion on your provider's network at peak hours</li>
+          <li>The physical distance to the server you are testing against</li>
+        </ul>
+        <p>That is why three tests at different times of day tell you far more than a single one. If you want a number you can take to your provider, test over Ethernet, at a quiet hour, with nothing else running — that is the closest you will get to measuring the line itself rather than everything attached to it.</p>
+      </div>
+    </div>
+  
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Measure</h4>
+        <ul>
+          <li><a href="/">Speed test</a></li>
+          <li><a href="/latency">Latency test</a></li>
+          <li><a href="/stats">Statistics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/guide">Guide and FAQ</a></li>
+          <li><a href="/requirements">Speed requirements</a></li>
+          <li><a href="/news">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/terms">Terms of Service</a></li>
+          <li><a href="/legal/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li class="hidden" data-network-block><a data-network-link href="#" target="_blank" rel="noopener noreferrer"><span data-network-label>Other network</span></a></li>
+          <li><a href="/api/health">Service status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Speed engine: OpenSpeedTest &mdash; open source and free</span>
+      <span>We do not store your IP address.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

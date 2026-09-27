@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<meta name="robots" content="noindex">
+<title>Signing you in…</title>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Internet Speed">
+<script type="module" src="/js/signin-callback.js"></script>
+</head>
+<body>
+<main class="wrap" style="min-height:70vh;display:grid;place-content:center;justify-items:center;text-align:center;gap:var(--s4);max-width:620px">
+  <span class="pi-glyph" style="font-size:3rem">π</span>
+  <h1 id="cb-title" style="font-size:var(--f-xl);margin:0">Signing you in…</h1>
+  <p id="cb-message" class="muted" style="margin:0">Checking the response from Pi.</p>
+
+  <div class="button-row hidden" id="cb-actions">
+    <a class="btn btn-primary" href="/#history">Continue</a>
+    <a class="btn btn-ghost" href="/">Back to the site</a>
+  </div>
+
+  <div class="debug-panel hidden" id="cb-debug" style="width:100%;text-align:start">
+    <div class="debug-head"><b>Details</b></div>
+    <pre id="cb-debug-body"></pre>
+  </div>
+</main>
+</body>
+</html>

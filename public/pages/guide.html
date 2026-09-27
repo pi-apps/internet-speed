@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>Guide and FAQ — Internet Speed</title>
+<meta name="description" content="What to try when your connection is slow, and answers to the questions people ask most.">
+<meta name="color-scheme" content="dark light">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<script type="module" src="/js/about-page.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="site-header" id="header">
+  <span class="scroll-progress" id="scroll-progress" aria-hidden="true"></span>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Speed &amp; latency</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/latency">Latency</a>
+        <a href="/stats">Statistics</a>
+        <a href="/guide" aria-current="page">Guide</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+        <div class="drawer-section">
+          <a class="btn btn-ghost hidden" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+            <span class="pi-glyph" aria-hidden="true">&#960;</span><span data-network-label>Other network</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <button class="btn btn-primary btn-sm pi-btn" id="pi-auth" type="button">
+        <span class="pi-glyph" aria-hidden="true">&#960;</span><span id="pi-auth-label">Sign in</span>
+      </button>
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap section" id="main">
+  <div class="section-head">
+    <span class="eyebrow">Help</span>
+    <h1 style="font-size:var(--f-2xl)">Guide and answers</h1>
+    <p>The troubleshooting order matters: this starts with the cheapest thing to try and ends with what to take to your provider.</p>
+  </div>
+
+
+    
+
+    <details class="acc" open>
+      <summary>1. Test properly first</summary>
+      <div class="acc-body">
+        <p>A lot of "slow internet" turns out to be a badly run test. Before anything else:</p>
+        <ul>
+          <li>Stop downloads and video on every other device.</li>
+          <li>Use an Ethernet cable rather than Wi-Fi if you can.</li>
+          <li>Test in a private window so extensions stay out of the way.</li>
+          <li>Test three times at different hours and go by the average.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>2. Sort out your Wi-Fi</summary>
+      <div class="acc-body">
+        <p>In dense buildings the 2.4 GHz band is usually saturated. If your router offers 5 GHz, move nearby devices onto it.</p>
+        <ul>
+          <li>Put the router out in the open and up high, not in a cupboard or behind the TV.</li>
+          <li>Keep it away from microwaves, cordless phones and fish tanks.</li>
+          <li>Set the Wi-Fi channel manually to a quiet one.</li>
+          <li>A badly placed repeater halves your speed. Test before you commit to a spot.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>3. Check the router and cables</summary>
+      <div class="acc-body">
+        <ul>
+          <li>Older routers become the bottleneck above 100 Mbps.</li>
+          <li>Replace ageing Cat5 cable with Cat5e or Cat6.</li>
+          <li>Power the router down fully and back up after 30 seconds.</li>
+          <li>A router that overheats degrades gradually, so retest after a long session.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>4. High latency but fine speed? Look here</summary>
+      <div class="acc-body">
+        <p>If the speed test looks healthy but the latency test does not, the bottleneck is the route rather than the pipe:</p>
+        <ul>
+          <li>Check whether one service is far slower than the rest. That points at routing or peering, not at your line.</li>
+          <li>Turn off any VPN or proxy and run the latency test again — the difference tells you what the tunnel costs you.</li>
+          <li>Try a different DNS resolver. Slow name resolution shows up as latency on every first connection.</li>
+          <li>On Wi-Fi, latency spikes far more than throughput does. Compare against Ethernet.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary>5. Still wrong? Now call your provider</summary>
+      <div class="acc-body">
+        <p>Do not call empty-handed. Have this ready:</p>
+        <ul>
+          <li>The CSV export from your history, with a timestamp on every run.</li>
+          <li>Results taken over Ethernet, not Wi-Fi.</li>
+          <li>Runs from several times of day showing the pattern.</li>
+          <li>Your contracted speed next to the figure you actually measured.</li>
+        </ul>
+      </div>
+    </details>
+  <h2 class="section-sub">Frequently asked questions</h2>
+    
+
+    <details class="acc" data-group="faq">
+      <summary>What is the difference between megabits and megabytes?</summary>
+      <div class="acc-body">
+        <p>Connection speed is measured in megabits per second (Mbps); file sizes are in megabytes (MB). One megabyte is eight megabits. So an 80 Mbps line downloads at roughly 10 MB/s at best. If your download manager shows about an eighth of your test number, everything is working correctly.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Why is the latency here higher than my command-line ping?</summary>
+      <div class="acc-body">
+        <p>Because it measures something bigger. A browser cannot send ICMP packets, so each probe is a full HTTPS request: DNS, TCP, TLS and one HTTP round trip. That stack costs real milliseconds on top of the raw network time. The number is still useful for comparing services against each other and for watching your own connection over time.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>One service shows "unreachable". Is my internet broken?</summary>
+      <div class="acc-body">
+        <p>Not necessarily. It means the request did not complete: the service may be blocked on your network, filtered in your country, behind a corporate firewall, or simply having a bad moment. If everything else responds normally, the problem is specific to that service rather than to your connection.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Why is my speed lower than what I pay for?</summary>
+      <div class="acc-body">
+        <p>Your advertised speed is a ceiling for the line, not a guarantee at any given moment. Wi-Fi, the router, other devices in the house, network congestion and distance to the server all take a share. A modest gap is normal. Consistently getting under half the ceiling over Ethernet is worth raising with your provider.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Other sites give me a different speed. Which is right?</summary>
+      <div class="acc-body">
+        <p>Both can be. Every speed test measures your speed to one particular server. A closer server, or one with a better route, gives a higher number. For a fair comparison, always use the same server under the same conditions.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>What does signing in with Pi give me?</summary>
+      <div class="acc-body">
+        <p>It ties your latency history to your Pi account instead of to one browser. Sign in on a second device and the same history is there; clear your browser data and nothing is lost. Any runs you made anonymously in this browser before signing in are moved across to your account automatically.</p>
+        <p>Sign-in uses Pi's standard OAuth flow, so it works from any browser: you are taken to Pi to approve the request and sent straight back here. We ask only for the <code>username</code> scope — no wallet access, and this app never creates payments.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Does a VPN affect these results?</summary>
+      <div class="acc-body">
+        <p>Considerably. A VPN routes your traffic through an extra server, so latency rises by however long it takes to reach that server and come back — often 20 to 100 ms, sometimes far more if the exit is on another continent. Throughput usually drops too, because of encryption overhead and the capacity of the VPN server itself.</p>
+        <p>If you use one, run the latency test with the VPN on and again with it off. The difference is what the tunnel costs you, measured rather than guessed.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Why does Wi-Fi look fine on speed but bad on latency?</summary>
+      <div class="acc-body">
+        <p>Because they fail differently. Wi-Fi can usually find a moment to push a large transfer through at full speed, which is what a throughput test measures. Latency is measured in small packets that have to go out immediately, and on a congested channel those wait their turn. That waiting shows up as jitter rather than as a lower speed.</p>
+        <p>This is why a video call stutters on a connection that downloads at 200 Mbps. Compare against Ethernet and the difference is usually obvious.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Is any of this stored on a blockchain?</summary>
+      <div class="acc-body">
+        <p>No. Your test results live in an ordinary database on this server and nowhere else. The only thing that touches the Pi Blockchain is a donation, if you choose to make one — and that records the payment, not your measurements.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>What do you store about me?</summary>
+      <div class="acc-body">
+        <p>The latency figures, your provider name, approximate city, browser and operating system. Your IP address is never stored — only a salted hash that cannot be reversed, used to spot duplicates. If you sign in with Pi we also store your app-scoped Pi identifier and username; that identifier is specific to this app and cannot be used to identify you elsewhere. You can delete your history at any time from the history section. The speed test itself runs inside the OpenSpeedTest widget, and this site never sees its numbers.</p>
+      </div>
+    </details>
+
+    <details class="acc" data-group="faq">
+      <summary>Is it accurate on mobile?</summary>
+      <div class="acc-body">
+        <p>Yes, with two caveats. On a cellular network your speed depends on signal strength and how busy the tower is, and it can change within minutes. Mobile browsers also hit their own ceiling before the network does on very fast connections.</p>
+      </div>
+    </details>
+  
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Measure</h4>
+        <ul>
+          <li><a href="/">Speed test</a></li>
+          <li><a href="/latency">Latency test</a></li>
+          <li><a href="/stats">Statistics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/guide">Guide and FAQ</a></li>
+          <li><a href="/requirements">Speed requirements</a></li>
+          <li><a href="/news">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/terms">Terms of Service</a></li>
+          <li><a href="/legal/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li class="hidden" data-network-block><a data-network-link href="#" target="_blank" rel="noopener noreferrer"><span data-network-label>Other network</span></a></li>
+          <li><a href="/api/health">Service status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Speed engine: OpenSpeedTest &mdash; open source and free</span>
+      <span>We do not store your IP address.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

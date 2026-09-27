@@ -1,0 +1,182 @@
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.boot > * { animation: rise 640ms var(--ease-out) both; }
+.boot > *:nth-child(1) { animation-delay: 40ms; }
+.boot > *:nth-child(2) { animation-delay: 150ms; }
+.boot > *:nth-child(3) { animation-delay: 240ms; }
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+[data-reveal][data-visible='true'] { opacity: 1; transform: none; }
+[data-reveal][data-delay='1'] { transition-delay: 70ms; }
+[data-reveal][data-delay='2'] { transition-delay: 140ms; }
+
+@keyframes sweep {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translateX(240%); opacity: 0; }
+}
+.console::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 38%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--dl-soft), transparent);
+  opacity: 0;
+}
+.console[data-booting='true']::after { animation: sweep 1200ms var(--ease) 1; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; r: 3; }
+  50%      { opacity: 1; r: 4.6; }
+}
+body[data-testing='true'] .brand-mark .pulse,
+body[data-measuring='true'] .brand-mark .pulse { animation: pulse 1.2s var(--ease) infinite; }
+
+@keyframes halo {
+  0%   { box-shadow: 0 0 0 0 currentColor; opacity: 1; }
+  70%  { box-shadow: 0 0 0 7px transparent; opacity: 0.85; }
+  100% { box-shadow: 0 0 0 0 transparent; opacity: 1; }
+}
+.dot.busy { color: var(--ul); animation: halo 1.6s var(--ease-out) infinite; }
+
+@keyframes probe-scan {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.probe[data-state='busy'] .probe-bar { position: relative; overflow: hidden; }
+.probe[data-state='busy'] .probe-bar::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 25%;
+  background: linear-gradient(90deg, transparent, var(--lat), transparent);
+  animation: probe-scan 1s linear infinite;
+}
+
+@keyframes probe-settle {
+  from { opacity: 0.5; transform: translateY(3px); }
+  to   { opacity: 1; transform: none; }
+}
+.probe[data-state='done'] .probe-value,
+.probe[data-state='failed'] .probe-value { animation: probe-settle 320ms var(--ease-out); }
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.toast { animation: toast-in 260ms var(--ease-spring); }
+
+@keyframes lift {
+  from { opacity: 0.4; transform: scale(0.99); }
+  to   { opacity: 1; transform: none; }
+}
+.summary:not(.hidden) { animation: lift 380ms var(--ease-out); }
+
+@keyframes shimmer { to { background-position-x: -200%; } }
+.skeleton {
+  border-radius: var(--r-sm);
+  background: linear-gradient(90deg, var(--panel-2) 40%, var(--panel) 50%, var(--panel-2) 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  color: transparent;
+  min-height: 1em;
+}
+
+@supports (interpolate-size: allow-keywords) {
+  .acc .acc-body { interpolate-size: allow-keywords; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+@keyframes aurora-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  33%  { transform: translate3d(3%, -2%, 0) scale(1.06); }
+  66%  { transform: translate3d(-2%, 3%, 0) scale(1.02); }
+  100% { transform: translate3d(1%, 1%, 0) scale(1.08); }
+}
+
+@keyframes probe-in {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+.probe { animation: probe-in 380ms var(--ease-out) both; }
+.probe:nth-child(1) { animation-delay: 20ms; }
+.probe:nth-child(2) { animation-delay: 55ms; }
+.probe:nth-child(3) { animation-delay: 90ms; }
+.probe:nth-child(4) { animation-delay: 125ms; }
+.probe:nth-child(5) { animation-delay: 160ms; }
+.probe:nth-child(6) { animation-delay: 195ms; }
+.probe:nth-child(7) { animation-delay: 230ms; }
+.probe:nth-child(8) { animation-delay: 265ms; }
+.probe:nth-child(9) { animation-delay: 300ms; }
+.probe:nth-child(10) { animation-delay: 335ms; }
+
+@keyframes swatch-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+.theme-menu[data-open='true'] .theme-option { animation: swatch-in 260ms var(--ease-out) both; }
+.theme-menu[data-open='true'] .theme-option:nth-child(2) { animation-delay: 40ms; }
+.theme-menu[data-open='true'] .theme-option:nth-child(3) { animation-delay: 80ms; }
+.theme-menu[data-open='true'] .theme-option:nth-child(4) { animation-delay: 120ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+      .probe { animation: none; }
+}
+
+@keyframes resolve {
+  0%   { opacity: 0; clip-path: inset(0 0 100% 0); }
+  60%  { opacity: 1; clip-path: inset(0 0 0 0); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+.hero h1 { animation: resolve 760ms var(--ease-out) both; }
+
+@keyframes tube-warmup {
+  0%, 12%  { opacity: 0.25; text-shadow: none; }
+  14%      { opacity: 1; }
+  16%      { opacity: 0.35; }
+  20%      { opacity: 1; text-shadow: var(--neon-dl); }
+  24%      { opacity: 0.6; }
+  28%, 100% { opacity: 1; text-shadow: var(--neon-dl); }
+}
+.hero h1 em { animation: tube-warmup 1.9s var(--ease) both 420ms; }
+
+@keyframes grid-sweep {
+  0%   { background-position: 0 0, 0 0, 0 -100vh; }
+  100% { background-position: 0 0, 0 0, 0 100vh; }
+}
+body::after { animation: grid-sweep 14s linear infinite; }
+
+@keyframes ready-pulse {
+  0%, 100% { box-shadow: 0 0 18px -4px color-mix(in srgb, var(--dl) 70%, transparent); }
+  50%      { box-shadow: 0 0 30px -2px color-mix(in srgb, var(--dl) 95%, transparent); }
+}
+.btn-primary:not(:disabled):focus-visible { animation: ready-pulse 1.6s var(--ease) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1, .hero h1 em { animation: none; opacity: 1; clip-path: none; }
+  body::after { animation: none; }
+  .btn-primary:focus-visible { animation: none; }
+}

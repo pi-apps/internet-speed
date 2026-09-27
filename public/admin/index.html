@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Internet Speed</title>
+<meta name="color-scheme" content="dark light">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+<a class="skip" href="#panel">Skip to the dashboard</a>
+
+<header class="site-header" id="header">
+  <span class="scroll-progress" id="scroll-progress" aria-hidden="true"></span>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Admin</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Site</a>
+        <a href="/admin" aria-current="page">Admin</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <button class="btn btn-ghost btn-sm pi-btn" id="pi-auth" type="button">
+        <span class="pi-glyph" aria-hidden="true">π</span><span id="pi-auth-label">Sign in</span>
+      </button>
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap section" id="panel">
+  <div class="section-head">
+    <span class="eyebrow">Control</span>
+    <h1 style="font-size:var(--f-2xl)">Dashboard</h1>
+    <p id="admin-intro">Checking your session…</p>
+  </div>
+
+  <div class="card" id="gate">
+    <h3 id="gate-title">Sign in required</h3>
+    <p id="gate-note">Sign in with the Pi account listed in ADMIN_USERNAMES.</p>
+    <div class="button-row" style="margin-bottom:0">
+      <button class="btn btn-primary" id="gate-signin" type="button">Sign in with Pi</button>
+      <a class="btn btn-ghost" href="/">Back to the site</a>
+    </div>
+  </div>
+
+  <div id="dash" class="hidden">
+    <div class="grid-3" id="admin-totals"></div>
+
+    <h2 class="section-sub">Server</h2>
+    <div class="button-row" style="margin-top:0">
+      <button class="btn btn-ghost btn-sm" id="payout-check" type="button">Check the payout path</button>
+      <button class="btn btn-ghost btn-sm" id="settle-pending" type="button">Settle pending Pi payments</button>
+      <span class="muted" id="payout-check-result" style="align-self:center;font-size:var(--f-sm)"></span>
+    </div>
+    <p class="muted" style="font-size:var(--f-sm)">
+      These come from environment variables and cannot be changed from a web page.
+      Secrets are never sent to this browser.
+    </p>
+    <div id="admin-server"></div>
+
+    <h2 class="section-sub">Settings</h2>
+    <p class="muted" style="font-size:var(--f-sm)">
+      Saved to the database and applied immediately. A value shown as
+      <b>default</b> follows the environment file until you change it here.
+    </p>
+    <form id="settings-form"></form>
+    <div class="button-row">
+      <button class="btn btn-primary" id="settings-save" type="button">Save settings</button>
+      <span class="muted" id="settings-status" style="align-self:center;font-size:var(--f-sm)"></span>
+    </div>
+
+    <h2 class="section-sub">Leaderboard and payouts</h2>
+    <div class="card panel">
+      <div class="panel-bar">
+        <label class="field" style="max-width:220px">
+          <span>Day</span>
+          <input id="admin-day" type="date">
+        </label>
+        <div class="panel-actions">
+          <button class="btn btn-ghost btn-sm" id="admin-load-day" type="button">Load</button>
+          <button class="btn btn-primary btn-sm" id="admin-pay" type="button">Pay the winner</button>
+        </div>
+      </div>
+      <ol class="board" id="admin-board"></ol>
+      <div class="board-empty" id="admin-board-empty">Pick a day and press Load.</div>
+      <p class="donate-status hidden" id="admin-pay-status"></p>
+    </div>
+
+    <h2 class="section-sub">News</h2>
+    <p class="muted" style="font-size:var(--f-sm)">
+      Published posts appear at <a href="/news">/news</a>, and the three most recent
+      are listed at the foot of the home page. Formatting: <code>##</code> heading,
+      <code>-</code> bullet, <code>1.</code> numbered, <code>&gt;</code> quote,
+      <code>**bold**</code>, <code>*italic*</code>, <code>`code`</code> and
+      <code>[text](https://link)</code>. Anything else is shown as plain text.
+    </p>
+
+    <div class="card">
+      <h3 id="post-form-title">New post</h3>
+      <input type="hidden" id="post-id">
+
+      <label class="field">
+        <span>Title</span>
+        <input id="post-title" type="text" maxlength="160" placeholder="What changed?">
+      </label>
+
+      <label class="field" style="margin-top:var(--s3)">
+        <span>Address (optional)</span>
+        <input id="post-slug" type="text" maxlength="80" placeholder="left empty, built from the title">
+      </label>
+
+      <label class="field" style="margin-top:var(--s3)">
+        <span>Summary (optional)</span>
+        <input id="post-summary" type="text" maxlength="300" placeholder="left empty, taken from the first line">
+      </label>
+
+      <label class="field" style="margin-top:var(--s3)">
+        <span>Body</span>
+        <textarea id="post-body" rows="12" placeholder="## A heading&#10;&#10;Some text with **bold** and a [link](https://example.com)."></textarea>
+      </label>
+
+      <div class="capability" style="margin-top:var(--s3)">
+        <span class="cap-name"><label for="post-published">Published</label></span>
+        <span class="cap-need">Unpublished posts are visible only here.</span>
+        <span class="verdict">
+          <input type="checkbox" id="post-published" style="width:22px;height:22px;accent-color:var(--dl)">
+        </span>
+      </div>
+
+      <div class="capability" style="margin-top:var(--s2)">
+        <span class="cap-name"><label for="post-pinned">Pinned</label></span>
+        <span class="cap-need">Kept at the top of the list.</span>
+        <span class="verdict">
+          <input type="checkbox" id="post-pinned" style="width:22px;height:22px;accent-color:var(--dl)">
+        </span>
+      </div>
+
+      <div class="button-row" style="margin-bottom:0">
+        <button class="btn btn-primary" id="post-save" type="button">Save post</button>
+        <button class="btn btn-ghost hidden" id="post-cancel" type="button">Cancel editing</button>
+        <span class="muted" id="post-status" style="align-self:center;font-size:var(--f-sm)"></span>
+      </div>
+    </div>
+
+    <div class="table-scroll" style="margin-top:var(--s4)">
+      <table>
+        <thead><tr><th>Title</th><th>Address</th><th>State</th><th>Updated</th><th></th></tr></thead>
+        <tbody id="admin-news"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section-sub">Payout history</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Winner</th><th>Score</th><th>Amount</th><th>Status</th><th>Transaction</th><th>Detail</th><th></th></tr>
+        </thead>
+        <tbody id="admin-rewards"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section-sub">Recent changes</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Setting</th><th>Changed</th><th>By</th></tr></thead>
+        <tbody id="admin-audit"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

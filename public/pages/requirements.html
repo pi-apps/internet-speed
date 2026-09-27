@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>How much speed do you need — Internet Speed</title>
+<meta name="description" content="Work out whether your connection covers video calls, 4K streaming, gaming and large downloads.">
+<meta name="color-scheme" content="dark light">
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/motion.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<script type="module" src="/js/requirements-page.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="site-header" id="header">
+  <span class="scroll-progress" id="scroll-progress" aria-hidden="true"></span>
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+        <path d="M5 20 L11 20 L14 11 L18 25 L21 16 L27 16" fill="none" stroke="var(--dl)"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="pulse" cx="27" cy="16" r="3" fill="var(--dl)" opacity="0.35"/>
+      </svg>
+      <span><span data-brand-name>Internet Speed</span><span class="brand-sub">Speed &amp; latency</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/latency">Latency</a>
+        <a href="/stats">Statistics</a>
+        <a href="/guide">Guide</a>
+        <a href="/news">News</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="drawer-extra">
+        <div class="drawer-section">
+          <span class="drawer-label">Appearance</span>
+          <div class="theme-grid" id="theme-grid"></div>
+        </div>
+        <div class="drawer-section">
+          <a class="btn btn-ghost hidden" data-network-link href="#" target="_blank" rel="noopener noreferrer">
+            <span class="pi-glyph" aria-hidden="true">&#960;</span><span data-network-label>Other network</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-tools">
+      <button class="btn btn-primary btn-sm pi-btn" id="pi-auth" type="button">
+        <span class="pi-glyph" aria-hidden="true">&#960;</span><span id="pi-auth-label">Sign in</span>
+      </button>
+      <div class="theme-menu-wrap">
+        <button class="icon-btn theme-trigger" id="theme-toggle" type="button"
+                aria-label="Change theme" aria-haspopup="true" aria-expanded="false"
+                aria-controls="theme-menu">
+          <span class="trigger-swatch" id="trigger-swatch" aria-hidden="true"></span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" data-open="false"></div>
+      </div>
+      <button class="icon-btn burger" id="burger" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap section" id="main">
+  <div class="section-head">
+    <span class="eyebrow">Requirements</span>
+    <h1 style="font-size:var(--f-2xl)">How much speed do you actually need?</h1>
+    <p>A raw number means little on its own. Put your speed in below and see what it covers.</p>
+  </div>
+
+
+    
+
+    <div class="card" style="margin-bottom:var(--s5)">
+      <div class="speed-input-row">
+        <label class="field" style="flex:1;min-width:180px">
+          <span>Your download speed (Mbps)</span>
+          <input id="speed-input" type="number" min="0" step="1" value="50" inputmode="decimal">
+        </label>
+        <div class="segment" id="speed-presets" role="group" aria-label="Common speeds">
+          <button type="button" data-value="5">5</button>
+          <button type="button" data-value="25">25</button>
+          <button type="button" data-value="50" aria-pressed="true">50</button>
+          <button type="button" data-value="100">100</button>
+          <button type="button" data-value="500">500</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <h3>What it covers</h3>
+        <div id="capability-list"></div>
+      </div>
+
+      <div>
+        <h3>How long downloads take</h3>
+        <div id="download-times"></div>
+
+        <div class="card" style="margin-top:var(--s4)">
+          <h3>Any file size</h3>
+          <div class="grid-2">
+            <label class="field"><span>File size</span>
+              <input id="calc-size" type="number" min="0" value="700" inputmode="decimal"></label>
+            <label class="field"><span>Unit</span>
+              <select id="calc-unit">
+                <option value="mb">Megabytes</option>
+                <option value="gb">Gigabytes</option>
+              </select>
+            </label>
+          </div>
+          <p id="calc-result" style="margin:var(--s3) 0 0;font-weight:700;color:var(--text)"></p>
+        </div>
+      </div>
+    </div>
+  
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Measure</h4>
+        <ul>
+          <li><a href="/">Speed test</a></li>
+          <li><a href="/latency">Latency test</a></li>
+          <li><a href="/stats">Statistics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/guide">Guide and FAQ</a></li>
+          <li><a href="/requirements">Speed requirements</a></li>
+          <li><a href="/news">News</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/terms">Terms of Service</a></li>
+          <li><a href="/legal/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li class="hidden" data-network-block><a data-network-link href="#" target="_blank" rel="noopener noreferrer"><span data-network-label>Other network</span></a></li>
+          <li><a href="/api/health">Service status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Speed engine: OpenSpeedTest &mdash; open source and free</span>
+      <span>We do not store your IP address.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

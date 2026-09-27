@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Sign-in — configuration check</title>
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/main.css">
+<script type="module" src="/js/pi-test.js"></script>
+</head>
+<body>
+<main class="wrap" style="padding:var(--s6) 0;max-width:760px">
+  <h1 style="font-size:var(--f-xl)">Pi Sign-in — configuration check</h1>
+  <p>
+    Shows exactly what this server will send to <code>accounts.pinet.com</code>, so
+    the values can be compared against the Developer Portal. The redirect URI below
+    must appear character for character in the app's Redirect URIs list.
+  </p>
+
+  <div class="button-row">
+    <button class="btn btn-primary" id="run" type="button">Run sign-in</button>
+    <button class="btn btn-ghost" id="copy" type="button">Copy log</button>
+    <a class="btn btn-ghost" href="/">Back to the site</a>
+  </div>
+
+  <div class="debug-panel">
+    <div class="debug-head"><b>Log</b></div>
+    <pre id="log">Press the button above.</pre>
+  </div>
+</main>
+</body>
+</html>
